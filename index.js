@@ -1,5 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const generageMarkdown = require('./utils/generateMarkdown');
+var fs = require('fs');
 
 // TODO: Create an array of questions for user input
 const questions = () =>{
@@ -61,26 +63,26 @@ const questions = () =>{
                 }
             }    
         },
-        // Asks the user if they wish to add instalation instruction.
+        // Asks the user if they wish to add installation instruction.
         {
             type: 'list',
-            name: 'confirmInstalation',
+            name: 'confirmInstallation',
             message: 'Do you wish to add instalation instruction?',
             choices: ['yes', 'no']
         },
-        // Asks for instalation instructions if answer is yes
+        // Asks for installation instructions if answer is yes
         {
             type: 'input',
-            name: 'instlation',
-            message: 'Provide instalation instructions for the project (Required)',
+            name: 'installation',
+            message: 'Provide installation instructions for the project (Required)',
             when(answers) {
-                return answers.confirmInstalation === "yes"
+                return answers.confirmInstallation === "yes"
             },
-            validate: instalationInput => {
-                if (instalationInput) {
+            validate: installationInput => {
+                if (installationInput) {
                     return true;
                 } else {
-                    console.log('You need to enter instalation instructions!');
+                    console.log('You need to enter installation instructions!');
                     return false;
                 }
             } 
@@ -231,18 +233,22 @@ const questions = () =>{
                 'zLib License'
             ]
         }        
-        
-
-
-    ]);    
+    ]);  
+     
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile('README.md',generageMarkdown(), err => {
+        if (err) throw err;
+        console.log('README Complete')
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {
     questions();
+    
 }
 
 // Function call to initialize app
