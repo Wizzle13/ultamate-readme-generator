@@ -10,34 +10,106 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+// adds installation to Table of Contents if it is needed
+function installationToC(readmeData) {
+  if (readmeData.confirmInstallation === 'yes') {
+    return '- [Installation](#installation)';
+  } else {
+    return '';
+  };
+};
+// adds installation section
+function installationSection(readmeData) {
+  if (readmeData.confirmInstallation === 'yes') {
+    return `## Installation
+    ${readmeData.installation}
+    `;
+  } else {
+    return '';
+  };
+};
+
+// adds usage to Table of Contents if it is needed
+function usageToC(readmeData) {
+  if (readmeData.confirmUsage === 'yes') {
+    return '- [Usage](#usage)';
+  } else {
+    return '';
+  };
+};
+// adds Usage section
+function usageSection(readmeData) {
+  if (readmeData.confirmUsage === 'yes') {
+    return `## Usage
+    ${readmeData.Usage}
+    `;
+  } else {
+    return '';
+  };
+};
+
+// adds Contribution to Table of Contents if it is needed
+function contributionsToC(readmeData) {
+  if (readmeData.confirmcontribution === 'yes') {
+    return '- [Contribution](#contribution)';
+  } else {
+    return '';
+  };
+};
+// adds contribution section
+function contributionsSection(readmeData) {
+  if (readmeData.confirmContribution === 'yes') {
+    if(readmeData.contributionProfile === true){
+    return `## Contribution
+${readmeData.contribution}
+
+![GitHub Contributors Image](https://contrib.rocks/image?repo=${readmeData.userName}/${readmeData.repoName})
+    `;
+    } else {
+      return `## Contribution
+      ${readmeData.contribution}
+      
+      `;
+    };
+  } else {
+    return 'Skipped';
+  };
+};
+
+//  Create a function to generate markdown for README
+function generateMarkdown(readmeData) {
   return `
-  # ${generateMarkdown.title}
+  # ${readmeData.title}
+
+  [![License: ${readmeData.license}](https://img.shields.io/badge/License-${readmeData.license}-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+
+  ${readmeData.license}
   ## Description
-  ${generateMarkdown.description}
+  ${readmeData.description}
+  ${readmeData.languages}
+
   ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
+  ${installationToC(readmeData)}
+  ${usageToC(readmeData)}
   - [Screenshots](#screenshots)
+  ${contributionsToC(readmeData)}
   - [Contributions](#contributions)
   - [Links](#links)
+  
+  ${installationSection(readmeData)}
 
-  ## Installation
-  ${generateMarkdown.installation}
 
-  ## Usage
-  ${generateMarkdown.usageInfo}
+  ${usageSection(readmeData)}
 
   ## Screenshots
 
-  ## Contributions
-  ${generateMarkdown.contribution}
+  ${contributionsSection(readmeData)}
 
   ## Links
-  GitHub Repository: https://github.com/${generateMarkdown.username}/${generateMarkdown.repoName}
+  GitHub Repository: https://github.com/${readmeData.userName}/${readmeData.repoName}
 
-  GitHub URL: https://${generateMarkdown.username}.github.io/${generateMarkdown.repoName}
+  GitHub URL: https://${readmeData.userName}.github.io/${readmeData.repoName}
 
 `;
 }
