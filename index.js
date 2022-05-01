@@ -4,7 +4,7 @@ const generageMarkdown = require('./utils/generateMarkdown');
 var fs = require('fs');
 
 // TODO: Create an array of questions for user input
-const questions = () =>{
+const questions = readmeData =>{
     return inquirer.prompt([
         // Has user enter the title for their README file.
         {
@@ -247,9 +247,17 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    questions();
-    
+    questions()
+    .then(readmeData => {
+        console.log ("step 1");
+        return generageMarkdown(readmeData);
+    })
+    .then(generageMarkdown => {
+        console.log ("step 2");
+        return writeToFile(generageMarkdown);
+    })
 }
 
 // Function call to initialize app
 init();
+
