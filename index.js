@@ -185,7 +185,7 @@ const questions = readmeData =>{
                 'Python', 
                 'JavaScript', 
                 'jQuery', 
-                'Node', 
+                'NodeJS', 
                 'ReactJS',
                 'Ruby',
                 'SQL'

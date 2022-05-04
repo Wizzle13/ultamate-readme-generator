@@ -1,13 +1,14 @@
 
   # d
 
-  [![License: Apache license 2.0](https://img.shields.io/badge/License-Apache_license_2.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+  [![License: Academic Free License v3.0](https://img.shields.io/badge/License-Academic Free License v3.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 
-  Apache license 2.0
+  Academic Free License v3.0
   ## Description
-  d
-  
+  wee
+  Bootstrap
+  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white) 
 
   ## Table of Contents
   - [Installation](#installation)
@@ -18,7 +19,7 @@
   - [Links](#links)
   
   ## Installation
-    d
+ewer
     
 
 
@@ -26,10 +27,14 @@
 
   ## Screenshots
 
-  Skipped
+  
 
   ## Links
-  GitHub Repository: https://github.com/d/d
+  GitHub Repository: https://github.com/fe/few
 
-  GitHub URL: https://d.github.io/d
+  GitHub URL: https://fe.github.io/few
 
+
+![Made With](https://img.shields.io/badge/Made%20with-Ultimate%20README%20Generator-blue?style=plastic)
+
+  &copy;2020 by Chris Burton

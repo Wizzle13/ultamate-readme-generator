@@ -1,3 +1,4 @@
+var languageBadges ='';
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
@@ -22,7 +23,7 @@ function installationToC(readmeData) {
 function installationSection(readmeData) {
   if (readmeData.confirmInstallation === 'yes') {
     return `## Installation
-    ${readmeData.installation}
+${readmeData.installation}
     `;
   } else {
     return '';
@@ -41,7 +42,7 @@ function usageToC(readmeData) {
 function usageSection(readmeData) {
   if (readmeData.confirmUsage === 'yes') {
     return `## Usage
-    ${readmeData.Usage}
+${readmeData.Usage}
     `;
   } else {
     return '';
@@ -67,15 +68,31 @@ ${readmeData.contribution}
     `;
     } else {
       return `## Contribution
-      ${readmeData.contribution}
+${readmeData.contribution}
       
       `;
     };
   } else {
-    return 'Skipped';
+    return '';
   };
 };
 
+function languagesSection(readmeData) {
+  
+  switch(readmeData.languages) {
+    case 'Bootstrap':
+      languageBadges += `![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?plastic&logo=bootstrap&logoColor=white) `;
+      break;
+    case 'HTML':
+      languageBadges += `![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white) `;
+    
+    default:
+      languageBadges +=  `![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white) `;
+      
+  };
+  console.log (languageBadges);
+  return `${languageBadges}`;
+};
 //  Create a function to generate markdown for README
 function generateMarkdown(readmeData) {
   return `
@@ -88,6 +105,7 @@ function generateMarkdown(readmeData) {
   ## Description
   ${readmeData.description}
   ${readmeData.languages}
+  ${languagesSection(readmeData)}
 
   ## Table of Contents
   ${installationToC(readmeData)}
@@ -111,6 +129,10 @@ function generateMarkdown(readmeData) {
 
   GitHub URL: https://${readmeData.userName}.github.io/${readmeData.repoName}
 
+
+![Made With](https://img.shields.io/badge/Made%20with-Ultimate%20README%20Generator-blue?style=plastic)
+
+  &copy;2020 by Chris Burton
 `;
 }
 
