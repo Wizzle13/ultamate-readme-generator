@@ -6,7 +6,8 @@
   This is a simple Node.js program designed to quickly create professional looking README.md documents.
 
   ### Tools and Languages used
-  JavaScript,NodeJS
+  ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=plastic&logo=Javascript&logoColor=white)
+  ![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=plastic&logo=node.js&logoColor=white)
   
   ## Table of Contents
   - [Installation](#installation)
@@ -26,13 +27,13 @@ To use this for yourself simply copy it to your hard drive.  Install Node.js and
   ## Screenshots
   <img src = "  ./screenshots/screenshot.png">
 
+
   
 
   ## Links
   GitHub Repository: https://github.com/Wizzle13/ultimate-readme-generator
 
-  GitHub URL: https://Wizzle13.github.io/ultimate-readme-generator
-
+  Walkthrough Video: https://github.com/Wizzle13/ultimate-readme-generator/walkthrough.mp4
 
 ![Made With](https://img.shields.io/badge/Made%20with-Ultimate%20README%20Generator-blue?style=plastic)
 
