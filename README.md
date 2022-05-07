@@ -1,15 +1,13 @@
 
-  # d
-
-  [![License: Academic Free License v3.0](https://img.shields.io/badge/License-Academic Free License v3.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-
-
-  Academic Free License v3.0
+  # Ultimate README Generator
+  [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
+  
   ## Description
-  wee
-  Bootstrap
-  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white) 
+  This is a simple Node.js program designed to quickly create professional looking README.md documents.
 
+  ### Tools and Languages used
+  JavaScript,NodeJS
+  
   ## Table of Contents
   - [Installation](#installation)
   
@@ -19,20 +17,21 @@
   - [Links](#links)
   
   ## Installation
-ewer
+To use this for yourself simply copy it to your hard drive.  Install Node.js and run npm install after that just run node index.
     
 
 
   
 
   ## Screenshots
+  <img src = "  ./screenshots/screenshot.png">
 
   
 
   ## Links
-  GitHub Repository: https://github.com/fe/few
+  GitHub Repository: https://github.com/Wizzle13/ultimate-readme-generator
 
-  GitHub URL: https://fe.github.io/few
+  GitHub URL: https://Wizzle13.github.io/ultimate-readme-generator
 
 
 ![Made With](https://img.shields.io/badge/Made%20with-Ultimate%20README%20Generator-blue?style=plastic)

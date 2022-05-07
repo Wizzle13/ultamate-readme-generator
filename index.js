@@ -4,7 +4,7 @@ const generageMarkdown = require('./utils/generateMarkdown');
 var fs = require('fs');
 
 //  Create an array of questions for user input
-const questions = readmeData =>{
+const questions = () => {
     return inquirer.prompt([
         // Has user enter the title for their README file.
         {
@@ -59,6 +59,20 @@ const questions = readmeData =>{
                     return true;
                 } else {
                     console.log('You need to enter a project description!');
+                    return false;
+                }
+            }    
+        },
+         // Has user enter the Discription for their README file.
+         {
+            type: 'input',
+            name: 'screenshot',
+            message: 'Provide a link to screenshot of the project (Required)',
+            validate: screenshotInput => {
+                if (screenshotInput) {
+                    return true;
+                } else {
+                    console.log('You need to enter a link to screenshot!');
                     return false;
                 }
             }    
@@ -156,7 +170,7 @@ const questions = readmeData =>{
         {
             type: 'input',
             name: 'testInstructions',
-            message: 'Provide contribution guidelines for the project (Required)',
+            message: 'Provide Test Instructions for the project (Required)',
             when(answers) {
                 return answers.confirmTest === "yes"
             },
@@ -189,6 +203,7 @@ const questions = readmeData =>{
                 'ReactJS',
                 'Ruby',
                 'SQL'
+          
             ]
         },
         // Asks the user for license information.
@@ -197,39 +212,40 @@ const questions = readmeData =>{
             name: 'license',
             message: 'What License type is this project?',
             choices: [
+                'None',
                 'Academic Free License v3.0',
                 'Apache license 2.0',
-                'Artistic license 2.0',
-                'Boost Software License 1.0',
-                'BSD 2-clause "Simplified" license',
-                'BSD 3-clause "New" or "Revised" license',
-                'BSD 3-clause Clear license',
-                'Creative Commons license family',
-                'Creative Commons Zero v1.0 Universal',
-                'Creative Commons Attribution 4.0',
-                'Creative Commons Attribution Share Alike 4.0',
-                'Do What The F*ck You Want To Public License',
-                'Educational Community License v2.0',
-                'Eclipse Public License 1.0',
-                'Eclipse Public License 2.0',
-                'European Union Public License 1.1',
-                'GNU Affero General Public License v3.0',
-                'GNU General Public License family',
-                'GNU General Public License v2.0',
-                'GNU General Public License v3.',
-                'GNU Lesser General Public License family',
-                'GNU Lesser General Public License v2.1',
-                'GNU Lesser General Public License v3.0',
+                // 'Artistic license 2.0',
+                // 'Boost Software License 1.0',
+                // 'BSD 2-clause "Simplified" license',
+                // 'BSD 3-clause "New" or "Revised" license',
+                // 'BSD 3-clause Clear license',
+                // 'Creative Commons license family',
+                // 'Creative Commons Zero v1.0 Universal',
+                // 'Creative Commons Attribution 4.0',
+                // 'Creative Commons Attribution Share Alike 4.0',
+                // 'Do What The F*ck You Want To Public License',
+                // 'Educational Community License v2.0',
+                // 'Eclipse Public License 1.0',
+                // 'Eclipse Public License 2.0',
+                // 'European Union Public License 1.1',
+                // 'GNU Affero General Public License v3.0',
+                // 'GNU General Public License family',
+                // 'GNU General Public License v2.0',
+                // 'GNU General Public License v3.',
+                // 'GNU Lesser General Public License family',
+                // 'GNU Lesser General Public License v2.1',
+                // 'GNU Lesser General Public License v3.0',
                 'ISC',
-                'LaTeX Project Public License v1.3c',
-                'Microsoft Public License',
+                // 'LaTeX Project Public License v1.3c',
+                // 'Microsoft Public License',
                 'MIT',
                 'Mozilla Public License 2.0',
                 'Open Software License 3.0',
-                'PostgreSQL License	postgresql',
-                'SIL Open Font License 1.1	ofl-1.1',
-                'University of Illinois/NCSA Open Source License',
-                'The Unlicense	unlicense',
+                // 'PostgreSQL License	postgresql',
+                // 'SIL Open Font License 1.1	ofl-1.1',
+                // 'University of Illinois/NCSA Open Source License',
+                // 'The Unlicense	unlicense',
                 'zLib License'
             ]
         }        
@@ -237,9 +253,54 @@ const questions = readmeData =>{
      
 };
 
+const langAndTech = languageData =>{
+    if (!languageData.projects) {
+        languageData.projects = [];
+      }
+    return inquirer.prompt([
+        // {
+    //         type: 'checkbox',
+    //         name: 'languages',
+    //         message: 'What did you use for this project with? (Check all that apply)',
+    //         choices: [
+    //             'Bootstrap', 
+    //             'CSS', 
+    //             'ES6', 
+    //             'Express', 
+    //             'HTML', 
+    //             'MonoDB', 
+    //             'MySQL',
+    //             'PHP',
+    //             'Python', 
+    //             'JavaScript', 
+    //             'jQuery', 
+    //             'NodeJS', 
+    //             'ReactJS',
+    //             'Ruby',
+    //             'SQL'
+          
+        //     ]
+        // },
+        // {
+        //     type: 'confirm',
+        //     name: 'confirmAddLanguage',
+        //     message: 'Would you like to enter an additional option?',
+        //     default: false
+        // }
+    ])
+    .then(readmeData => {
+        languageData.projects.push(readmeData);
+        if (readmeData.confirmAddLanguage) {
+            return langAndTech(languageData);
+        } else {
+            return languageData;
+        }
+    });
+};
+
 // Create a function to write README file
 function writeToFile(generageMarkdown) {
-    fs.writeFile('README.md',generageMarkdown, err => {
+    fs.writeFile('./dest/README.md',generageMarkdown, err => {
         if (err) throw err;
         console.log('README Complete')
     })
@@ -248,12 +309,15 @@ function writeToFile(generageMarkdown) {
 // Create a function to initialize app
 function init() {
     questions()
-    .then(readmeData => {
-        return generageMarkdown(readmeData);
-    })
-    .then(generageMarkdown => {
-        return writeToFile(generageMarkdown);
-    })
+        .then(langAndTech)
+
+        .then(languageData => {
+            return generageMarkdown(languageData);
+        })
+        
+        .then(generageMarkdown => {
+            return writeToFile(generageMarkdown);
+        })
 }
 
 // Function call to initialize app
