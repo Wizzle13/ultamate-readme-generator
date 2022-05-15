@@ -208,6 +208,8 @@ function generateMarkdown(readmeData) {
   return `
   # ${readmeData.title}
   ${renderLicenseBadge(readmeData.license)}
+
+  ![Open Issues](https://img.shields.io/github/issues-raw/${readmeData.userName}/${readmeData.repoName}?style=plastic)
   
   ## Description
   ${readmeData.description}
