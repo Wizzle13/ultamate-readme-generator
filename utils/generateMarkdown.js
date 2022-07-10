@@ -210,6 +210,8 @@ function generateMarkdown(readmeData) {
   ${renderLicenseBadge(readmeData.license)}
 
   ![Open Issues](https://img.shields.io/github/issues-raw/${readmeData.userName}/${readmeData.repoName}?style=plastic)
+  ![Closed Issues](https://img.shields.io/github/issues-closed-raw/${readmeData.userName}/${readmeData.repoName}?label=Closed%20Issues&style=plastic)
+  ![Last Commit](https://img.shields.io/github/last-commit/${readmeData.userName}/${readmeData.repoName}?style=plastic)
   
   ## Description
   ${readmeData.description}

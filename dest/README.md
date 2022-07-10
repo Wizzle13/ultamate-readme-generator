@@ -1,14 +1,14 @@
 
-  # Team Profile Generator
-  [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
+  # Social Media Startup
+  
+
+  ![Open Issues](https://img.shields.io/github/issues-raw/wizzle13/socialmedia-startup?style=plastic)
   
   ## Description
-  Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
+  this is the backend setup for a new social meadia site in development.
 
   ### Tools and Languages used
-  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white)
-  ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=plastic&logo=css3&logoColor=white)
-  ![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=plastic&logo=node.js&logoColor=white)
+  
   
   ## Table of Contents
   
@@ -24,16 +24,16 @@
   
 
   ## Screenshots
-  <img src = "  ./screenshots/screenshot.jpg">
+  <img src = "  /s">
 
   
 
   
 
   ## Links
-  GitHub Repository: https://github.com/wizzle13/my-team-profile-generator
+  GitHub Repository: https://github.com/wizzle13/socialmedia-startup
 
-  GitHub URL: https://wizzle13.github.io/my-team-profile-generator
+  GitHub URL: https://wizzle13.github.io/socialmedia-startup
 
 
 ![Made With](https://img.shields.io/badge/Made%20with-Ultimate%20README%20Generator-blue?style=plastic)

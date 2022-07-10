@@ -2,6 +2,9 @@
   # Ultimate README Generator
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
   
+  ![Open Issues](https://img.shields.io/github/issues-raw/Wizzle13/ultimate-readme-generator?style=plastic)
+  ![Closed Issues](https://img.shields.io/github/issues-closed-raw/Wizzle13/ultimate-readme-generator?label=Closed%20Issues&style=plastic)
+  ![Last Commit](https://img.shields.io/github/last-commit/Wizzle13/ultimate-readme-generator?style=plastic)
   ## Description
   This is a simple Node.js program designed to quickly create professional looking README.md documents.
 
