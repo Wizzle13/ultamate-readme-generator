@@ -185,24 +185,24 @@ const questions = () => {
         },
         {
             type: 'checkbox',
-            name: 'languages',
-            message: 'What did you use for this project with? (Check all that apply)',
+            name: 'frontEndLanguages',
+            message: 'What Front end languages did you use for this project with? (Check all that apply)',
             choices: [
+                'NONE',
+                'Angular',
                 'Bootstrap', 
                 'CSS', 
-                'ES6', 
-                'Express', 
                 'HTML', 
-                'MonoDB', 
-                'MySQL',
                 'PHP',
                 'Python', 
                 'JavaScript', 
                 'jQuery', 
-                'NodeJS', 
-                'ReactJS',
+                'React',
                 'Ruby',
-                'SQL'
+                'SASS',
+                'Swift',
+                'Vue',
+                
           
             ]
         },
@@ -300,7 +300,7 @@ const langAndTech = languageData =>{
 
 // Create a function to write README file
 function writeToFile(generageMarkdown) {
-    fs.writeFile('./dest/README.md',generageMarkdown, err => {
+    fs.writeFile('./dist/README.md',generageMarkdown, err => {
         if (err) throw err;
         console.log('README Complete')
     })

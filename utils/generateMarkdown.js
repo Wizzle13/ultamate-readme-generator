@@ -217,7 +217,8 @@ function generateMarkdown(readmeData) {
   ${readmeData.description}
 
   ### Tools and Languages used
-  ${readmeData.languages}
+  ##### Frontend:
+  ${readmeData.frontEndLanguages}
   
   ## Table of Contents
   ${installationToC(readmeData)}
@@ -233,7 +234,7 @@ function generateMarkdown(readmeData) {
   ${usageSection(readmeData)}
 
   ## Screenshots
-  <img src = "  ${readmeData.screenshot}">
+  <img src="${readmeData.screenshot}">
 
   ${contributionsSection(readmeData)}
 
