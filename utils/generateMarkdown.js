@@ -219,6 +219,12 @@ function generateMarkdown(readmeData) {
   ### Tools and Languages used
   ##### Frontend:
   ${readmeData.frontEndLanguages}
+  ##### Backend:
+  ${readmeData.backEndLanguages}
+  ##### Database:
+  ${readmeData.database}
+  ##### Tools:
+  ${readmeData.tools}
   
   ## Table of Contents
   ${installationToC(readmeData)}
