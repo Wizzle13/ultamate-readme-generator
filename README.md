@@ -11,6 +11,7 @@
   ### Tools and Languages used
   ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=plastic&logo=Javascript&logoColor=white)
   ![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=plastic&logo=node.js&logoColor=white)
+  ![pnpm](https://img.shields.io/badge/pnpm-F69220?style=plastic&logo=pnpm&logoColor=white)
   
   ## Table of Contents
   - [Installation](#installation)
@@ -28,7 +29,7 @@ To use this for yourself simply copy it to your hard drive.  Install Node.js and
   
 
   ## Screenshots
-  <img src = "  ./screenshots/screenshot.png">
+  <img src = "./screenshots/screenshot.png">
 
 
   

@@ -254,7 +254,7 @@ function generateMarkdown(readmeData) {
 
 ![Made With](https://img.shields.io/badge/Made%20with-Ultimate%20README%20Generator-blue?style=plastic)
 
-  &copy;2020 by Chris Burton
+  &copy;2022 by Chris Burton
 `;
 }
 

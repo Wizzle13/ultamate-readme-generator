@@ -239,13 +239,17 @@ const questions = () => {
             message: 'What tools did you use for this project with? (Check all that apply)',
             choices: [
                 'NONE',
+                'Bun',
                 'GitHub',
                 'Heroku',
                 'Insomnia',
                 'Jest',
                 'Lighthouse',
+                'npm',
+                'pnpm',
                 'VSCode',
                 'Webpack',
+                'Yarn',
             ]
         },
         // Asks the user for license information.
