@@ -37,7 +37,7 @@ To use this for yourself simply copy it to your hard drive.  Install Node.js and
   ## Links
   GitHub Repository: https://github.com/Wizzle13/ultimate-readme-generator
 
-  Walkthrough Video: https://github.com/Wizzle13/ultimate-readme-generator/walkthrough.mp4
+  Walkthrough Video: https://wizzle13.github.io/ultimate-readme-generator/
 
 ![Made With](https://img.shields.io/badge/Made%20with-Ultimate%20README%20Generator-blue?style=plastic)
 
