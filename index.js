@@ -193,12 +193,11 @@ const questions = () => {
                 'Bootstrap', 
                 'CSS', 
                 'HTML', 
-                'PHP',
-                'Python', 
                 'JavaScript', 
                 'jQuery', 
                 'React',
-                'Ruby',
+                'React Router',
+                
                 'SASS',
                 'Swift',
                 'Vue',
@@ -210,13 +209,14 @@ const questions = () => {
             message: 'What Back End languages did you use for this project with? (Check all that apply)',
             choices: [
                 'NONE',
-                'C/C++',                
+                'C++',
+                'Express',                
                 'Java',
                 'JavaScript', 
                 'NodeJS',
                 'PHP',
                 'Python', 
-                'React Router',
+                
                 'Ruby',
                 'Rust',
                 'Solidity',
@@ -229,8 +229,11 @@ const questions = () => {
             choices: [
                 'NONE',
                 'MongoDB',
-                'SQL',
                 'MySQL',
+                'Oracle',
+                'PostgreSQL',
+                
+                
             ]
         },
         {
@@ -239,7 +242,9 @@ const questions = () => {
             message: 'What tools did you use for this project with? (Check all that apply)',
             choices: [
                 'NONE',
+                'AWS',
                 'Bun',
+                'Git',
                 'GitHub',
                 'Heroku',
                 'Insomnia',
@@ -247,6 +252,7 @@ const questions = () => {
                 'Lighthouse',
                 'npm',
                 'pnpm',
+                'Stripe',
                 'VSCode',
                 'Webpack',
                 'Yarn',

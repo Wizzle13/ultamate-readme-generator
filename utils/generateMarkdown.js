@@ -64,7 +64,6 @@ function renderLicenseBadge(license) {
 }
 }
 
-
 // adds installation to Table of Contents if it is needed
 function installationToC(readmeData) {
   if (readmeData.confirmInstallation === 'yes') {
@@ -73,6 +72,7 @@ function installationToC(readmeData) {
     return '';
   };
 };
+
 // adds installation section
 function installationSection(readmeData) {
   if (readmeData.confirmInstallation === 'yes') {
@@ -92,6 +92,7 @@ function usageToC(readmeData) {
     return '';
   };
 };
+
 // adds Usage section
 function usageSection(readmeData) {
   if (readmeData.confirmUsageInfo === 'yes') {
@@ -111,6 +112,7 @@ function contributionsToC(readmeData) {
     return '';
   };
 };
+
 // adds contribution section
 function contributionsSection(readmeData) {
   if (readmeData.confirmContribution === 'yes') {
@@ -139,6 +141,7 @@ function testToC(readmeData) {
     return '';
   };
 };
+
 // adds Test Info section
 function testSection(readmeData) {
   if (readmeData.confirmTest === 'yes') {
@@ -150,59 +153,195 @@ ${readmeData.testInstructions}
   };
 };
 
-function languagesSection(readmeData) {
+function frontendLanguagesSection(readmeData) {
   
-  switch(readmeData.languages) {
-    case 'Bootstrap':
-      languageBadges += `![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?plastic&logo=bootstrap&logoColor=white) `;
+  let frontArray = readmeData.frontEndLanguages;
+  let languageBadges = ``;
+  
+  for (let i=0; i<frontArray.length; i++) {
+    switch(frontArray[i]) {
+      case 'NONE' :
+        languageBadges += `None`;
+        break;
+      case 'Angular' :
+        languageBadges += `![Angular](https://img.shields.io/badge/Angular-DD0031?plastic&logo=Angular&logoColor=white)`;
+        break;
+      case 'Bootstrap':
+        languageBadges += `![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?plastic&logo=bootstrap&logoColor=white) `;
+        break;
+      case 'CSS':
+        languageBadges += `![CSS](https://img.shields.io/badge/CSS3-1572B6?style=plastic&logo=css3&logoColor=white)`;
+        break;
+      case 'HTML':
+        languageBadges += `![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white) `;
+        break;
+      case 'JavaScript':
+        languageBadges += `![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=plastic&logo=Javascript&logoColor=white)`;
+        break;
+      case 'jQuery': 
+        languageBadges +=  `![JQuery](https://img.shields.io/badge/jQuery-0769AD?plastic&logo=jquery&logoColor=white)`;
+        break;
       
-    case 'CSS':
-      languageBadges += `![CSS](https://img.shields.io/badge/CSS3-1572B6?style=plastic&logo=css3&logoColor=white)`;
-
-    case 'ES6':
-      languageBadges += ``;
-
-    case 'Express':
-      languageBadges += `![Express Js](https://img.shields.io/badge/Express.js-404D59?style=plastic)`;
-
-    case 'HTML':
-      languageBadges += `![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white) `;
-    
-    case 'JavaScript':
-      languageBadges += `![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=plastic&logo=Javascript&logoColor=white)`;
-
-    case 'jQuery': 
-      languageBadges +=  `![JQuery](https://img.shields.io/badge/jQuery-0769AD?plastic&logo=jquery&logoColor=white)`;
-
-    case 'MonoDB': 
-      languageBadges += ``;
-
-    case 'MySQL':
-      languageBadges +=  `![MySQL](https://img.shields.io/badge/MySQL-00000F?style=plastic&logo=mysql&logoColor=white)`;
-
-    case 'NodeJS': 
-      languageBadges += `![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=plastic&logo=node.js&logoColor=white)`;
-
-    case 'PHP':
-      languageBadges += `![PHP](https://img.shields.io/badge/PHP-777BB4?style=plastic&logo=php&logoColor=white)`;
-
-    case 'Python': 
-    languageBadges += `![Python](https://img.shields.io/badge/Python-3776AB?style=plastic&logo=python&logoColor=white)`
-
-    case 'React':
-      languageBadges += `![React](https://img.shields.io/badge/React-20232A?style=plastic&logo=react&logoColor=61DAFB)`;
-
-    case 'Ruby':
-      languageBadges += `![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=plastic&logo=ruby&logoColor=white)`;
-
-    case 'SQL':
-      languageBadges += ``;
+      case 'React':
+        languageBadges += `![React](https://img.shields.io/badge/React-20232A?style=plastic&logo=react&logoColor=61DAFB)`;
+        break;
+      case 'React Router':
+        languageBadges += `![React Router](https://img.shields.io/badge/React_Router-20232A?style=plastic&logo=react_router&logoColor=61DAFB)`;
+        break;  
       
-      
+      case 'SASS':
+        languageBadges += `![SASS](https://img.shields.io/badge/SASS-CC6699?style=plastic&logo=SASS&logoColor=white)`;
+        break;
+      case 'Swift':
+        languageBadges += `![Swift](https://img.shields.io/badge/Swift-F05138?style=plastic&logo=Swift&logoColor=white)`;
+        break; 
+      case 'Vue':
+        languageBadges += `![Vue](https://img.shields.io/badge/Vue.js-4FC08D?style=plastic&logo=Vue.js&logoColor=white)`;
+        break;   
+    }   
   };
-  console.log (languageBadges);
+  
   return `${languageBadges}`;
 };
+
+function backendLanguagesSection(readmeData) {
+  
+  
+  let backArray = readmeData.backEndLanguages;
+  let languageBadges = ``;
+  
+  for (let i=0; i<backArray.length; i++) {
+    switch(backArray[i]) {
+      case 'NONE' :
+        languageBadges += `None`;
+        break;
+      case 'C++':
+        languageBadges += `![C++](https://img.shields.io/badge/Cplusplus-404D59?style=plastic&logo=Cplusplus&logoColor=white)`;
+        break;
+      case 'Express':
+        languageBadges += `![Express Js](https://img.shields.io/badge/Express.js-404D59?style=plastic&logo=Express&logoColor=white)`;
+        break;
+      case 'Java':
+        languageBadges += `![Java](https://img.shields.io/badge/Java-F7DF1E?style=plastic&logo=Java&logoColor=white)`;
+        break;  
+      case 'JavaScript':
+        languageBadges += `![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=plastic&logo=Javascript&logoColor=white)`;
+        break;
+      
+      case 'NodeJS': 
+        languageBadges += `![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=plastic&logo=node.js&logoColor=white)`;
+        break;
+      case 'PHP':
+        languageBadges += `![PHP](https://img.shields.io/badge/PHP-777BB4?style=plastic&logo=php&logoColor=white)`;
+        break;
+      case 'Python': 
+      languageBadges += `![Python](https://img.shields.io/badge/Python-3776AB?style=plastic&logo=python&logoColor=white)`
+      break;
+      case 'Ruby':
+        languageBadges += `![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=plastic&logo=ruby&logoColor=white)`;
+        break;
+      case 'Rust':
+        languageBadges += `![Rust](https://img.shields.io/badge/Rust-000000?style=plastic&logo=Rust&logoColor=white)`;
+        break; 
+      case 'Solidity':
+        languageBadges += `![Solitity](https://img.shields.io/badge/Solidity-363636?style=plastic&logo=Solidity&logoColor=white)`;
+        break;   
+    }  
+  };
+  
+  return `${languageBadges}`;
+};
+
+function databaseSection(readmeData) {
+  let databaseArray = readmeData.database;
+  let databaseBadges = ``;
+  
+    switch(databaseArray) {
+      case 'NONE' :
+        databaseBadges += `None`;
+        break;
+      case 'MongoDB' :
+        databaseBadges += `![MongoDB](https://img.shields.io/badge/MongoDB-47A248?plastic&logo=MongoDB&logoColor=white)`;
+        break;
+      case 'MySQL' :
+        databaseBadges += `![MySQL](https://img.shields.io/badge/MySQL-4479A1?plastic&logo=MySQL&logoColor=white)`;
+        break;
+      case 'Oracle' :
+      databaseBadges += `![Oracle](https://img.shields.io/badge/Oracle-F80000?plastic&logo=Oracle&logoColor=white)`;
+      break;
+      case 'PostgreSQL' :
+      databaseBadges += `![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?plastic&logo=PostgreSQL&logoColor=white)`;
+      break;  
+       
+  };
+  
+  return `${databaseBadges}`;
+};
+
+function toolsSection(readmeData) {
+  let toolsArray = readmeData.tools;
+  let toolsBadges = ``;
+  for (let i=0; i<toolsArray.length; i++) {
+    switch(toolsArray[i]) {
+      case 'NONE' :
+        toolsBadges += `None`;
+        break;
+      case 'AWS' :
+        toolsBadges += `![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-232F3E?plastic&logo=amazonaws&logoColor=white)`;
+        break;
+      case 'Bun' :
+        toolsBadges += `![Bun](https://img.shields.io/badge/Bun-000000?plastic&logo=Bun&logoColor=white)`;
+        break;
+      case 'Git' :
+        toolsBadges += `![Git](https://img.shields.io/badge/Git-F05032?plastic&logo=Git&logoColor=white)`;
+        break;
+      case 'GitHub' :
+        toolsBadges += `![GitHub](https://img.shields.io/badge/GitHub-181717?plastic&logo=GitHub&logoColor=white)`;
+        break;
+      case 'Heroku' :
+        toolsBadges += `![Heroku](https://img.shields.io/badge/Heroku-430098?plastic&logo=Heroku&logoColor=white)`;
+        break;  
+
+      case 'Insomnia' :
+        toolsBadges += `![Insomnia](https://img.shields.io/badge/Insomnia-4000BF?plastic&logo=Insomnia&logoColor=white)`;
+        break;  
+          
+      case 'Jest' :
+        toolsBadges += `![Jest](https://img.shields.io/badge/Jest-C21325?plastic&logo=Jest&logoColor=white)`;
+        break;  
+
+      case 'Lighthouse' :
+        toolsBadges += `![Lighthouse](https://img.shields.io/badge/Lighthouse-F44B21?plastic&logo=Lighthouse&logoColor=white)`;
+        break;  
+
+      case 'npm' :
+        toolsBadges += `![npm](https://img.shields.io/badge/npm-CB3837?plastic&logo=npm&logoColor=white)`;
+        break;  
+
+      case 'pnpm' :
+        toolsBadges += `![pnpm](https://img.shields.io/badge/pnpm-F69220?plastic&logo=pnpm&logoColor=white)`;
+        break;  
+
+      case 'Stripe' :
+        toolsBadges += `![Stripe](https://img.shields.io/badge/Stripe-008CDD?style=plastic&logo=Stripe&logoColor=white)`;
+        break;  
+      case 'VSCode' :
+        toolsBadges += `![VSCode](https://img.shields.io/badge/VSCode-007ACC?plastic&logo=visualstudiocode&logoColor=white)`;
+        break;  
+
+      case 'Webpack' :
+        toolsBadges += `![Webpack](https://img.shields.io/badge/Webpack-8DD6F9?style=plastic&logo=Webpack&logoColor=white)`;
+        break;  
+
+      case 'Yarn' :
+        toolsBadges += `![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?plastic&logo=Yarn&logoColor=white)`;
+        break;  
+    }   
+  };
+  
+  return `${toolsBadges}`;
+};
+      
 //  Create a function to generate markdown for README
 function generateMarkdown(readmeData) {
   return `
@@ -218,13 +357,14 @@ function generateMarkdown(readmeData) {
 
   ### Tools and Languages used
   ##### Frontend:
-  ${readmeData.frontEndLanguages}
+  ${frontendLanguagesSection(readmeData)}
   ##### Backend:
-  ${readmeData.backEndLanguages}
+  ${backendLanguagesSection(readmeData)}
   ##### Database:
-  ${readmeData.database}
+  ${databaseSection(readmeData)}
   ##### Tools:
-  ${readmeData.tools}
+  ${toolsSection(readmeData)}
+  
   
   ## Table of Contents
   ${installationToC(readmeData)}
