@@ -246,6 +246,28 @@ function backendLanguagesSection(readmeData) {
   return `${languageBadges}`;
 };
 
+function databaseSection(readmeData) {
+  let databaseArray = readmeData.database;
+  let databaseBadges = ``;
+  
+    switch(databaseArray) {
+      case 'MongoDB' :
+        databaseBadges += `![MongoDB](https://img.shields.io/badge/MongoDB-47A248?plastic&logo=MongoDB&logoColor=white)`;
+        break;
+      case 'MySQL' :
+        databaseBadges += `![MySQL](https://img.shields.io/badge/MySQL-4479A1?plastic&logo=MySQL&logoColor=white)`;
+        break;
+      case 'Oracle' :
+      databaseBadges += `![Oracle](https://img.shields.io/badge/Oracle-F80000?plastic&logo=Oracle&logoColor=white)`;
+      break;
+      case 'PostgreSQL' :
+      databaseBadges += `![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?plastic&logo=PostgreSQL&logoColor=white)`;
+      break;  
+       
+  };
+  
+  return `${databaseBadges}`;
+};
 
 //  Create a function to generate markdown for README
 function generateMarkdown(readmeData) {
@@ -266,7 +288,7 @@ function generateMarkdown(readmeData) {
   ##### Backend:
   ${backendLanguagesSection(readmeData)}
   ##### Database:
-  ${readmeData.database}
+  ${databaseSection(readmeData)}
   ##### Tools:
   ${readmeData.tools}
   

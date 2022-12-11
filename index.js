@@ -229,8 +229,11 @@ const questions = () => {
             choices: [
                 'NONE',
                 'MongoDB',
-                'SQL',
                 'MySQL',
+                'Oracle',
+                'PostgreSQL',
+                
+                
             ]
         },
         {
@@ -239,6 +242,7 @@ const questions = () => {
             message: 'What tools did you use for this project with? (Check all that apply)',
             choices: [
                 'NONE',
+                'AWS',
                 'Bun',
                 'GitHub',
                 'Heroku',
