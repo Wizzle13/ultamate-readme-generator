@@ -160,6 +160,9 @@ function frontendLanguagesSection(readmeData) {
   
   for (let i=0; i<frontArray.length; i++) {
     switch(frontArray[i]) {
+      case 'NONE' :
+        languageBadges += `None`;
+        break;
       case 'Angular' :
         languageBadges += `![Angular](https://img.shields.io/badge/Angular-DD0031?plastic&logo=Angular&logoColor=white)`;
         break;
@@ -209,6 +212,9 @@ function backendLanguagesSection(readmeData) {
   
   for (let i=0; i<backArray.length; i++) {
     switch(backArray[i]) {
+      case 'NONE' :
+        languageBadges += `None`;
+        break;
       case 'C++':
         languageBadges += `![C++](https://img.shields.io/badge/Cplusplus-404D59?style=plastic&logo=Cplusplus&logoColor=white)`;
         break;
@@ -251,6 +257,9 @@ function databaseSection(readmeData) {
   let databaseBadges = ``;
   
     switch(databaseArray) {
+      case 'NONE' :
+        databaseBadges += `None`;
+        break;
       case 'MongoDB' :
         databaseBadges += `![MongoDB](https://img.shields.io/badge/MongoDB-47A248?plastic&logo=MongoDB&logoColor=white)`;
         break;
@@ -269,6 +278,70 @@ function databaseSection(readmeData) {
   return `${databaseBadges}`;
 };
 
+function toolsSection(readmeData) {
+  let toolsArray = readmeData.tools;
+  let toolsBadges = ``;
+  for (let i=0; i<toolsArray.length; i++) {
+    switch(toolsArray[i]) {
+      case 'NONE' :
+        toolsBadges += `None`;
+        break;
+      case 'AWS' :
+        toolsBadges += `![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-232F3E?plastic&logo=amazonaws&logoColor=white)`;
+        break;
+      case 'Bun' :
+        toolsBadges += `![Bun](https://img.shields.io/badge/Bun-000000?plastic&logo=Bun&logoColor=white)`;
+        break;
+      case 'Git' :
+        toolsBadges += `![Git](https://img.shields.io/badge/Git-F05032?plastic&logo=Git&logoColor=white)`;
+        break;
+      case 'GitHub' :
+        toolsBadges += `![GitHub](https://img.shields.io/badge/GitHub-181717?plastic&logo=GitHub&logoColor=white)`;
+        break;
+      case 'Heroku' :
+        toolsBadges += `![Heroku](https://img.shields.io/badge/Heroku-430098?plastic&logo=Heroku&logoColor=white)`;
+        break;  
+
+      case 'Insomnia' :
+        toolsBadges += `![Insomnia](https://img.shields.io/badge/Insomnia-4000BF?plastic&logo=Insomnia&logoColor=white)`;
+        break;  
+          
+      case 'Jest' :
+        toolsBadges += `![Jest](https://img.shields.io/badge/Jest-C21325?plastic&logo=Jest&logoColor=white)`;
+        break;  
+
+      case 'Lighthouse' :
+        toolsBadges += `![Lighthouse](https://img.shields.io/badge/Lighthouse-F44B21?plastic&logo=Lighthouse&logoColor=white)`;
+        break;  
+
+      case 'npm' :
+        toolsBadges += `![npm](https://img.shields.io/badge/npm-CB3837?plastic&logo=npm&logoColor=white)`;
+        break;  
+
+      case 'pnpm' :
+        toolsBadges += `![pnpm](https://img.shields.io/badge/pnpm-F69220?plastic&logo=pnpm&logoColor=white)`;
+        break;  
+
+      case 'Stripe' :
+        toolsBadges += `![Stripe](https://img.shields.io/badge/Stripe-008CDD?style=plastic&logo=Stripe&logoColor=white)`;
+        break;  
+      case 'VSCode' :
+        toolsBadges += `![VSCode](https://img.shields.io/badge/VSCode-007ACC?plastic&logo=visualstudiocode&logoColor=white)`;
+        break;  
+
+      case 'Webpack' :
+        toolsBadges += `![Webpack](https://img.shields.io/badge/Webpack-8DD6F9?style=plastic&logo=Webpack&logoColor=white)`;
+        break;  
+
+      case 'Yarn' :
+        toolsBadges += `![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?plastic&logo=Yarn&logoColor=white)`;
+        break;  
+    }   
+  };
+  
+  return `${toolsBadges}`;
+};
+      
 //  Create a function to generate markdown for README
 function generateMarkdown(readmeData) {
   return `
@@ -290,7 +363,8 @@ function generateMarkdown(readmeData) {
   ##### Database:
   ${databaseSection(readmeData)}
   ##### Tools:
-  ${readmeData.tools}
+  ${toolsSection(readmeData)}
+  
   
   ## Table of Contents
   ${installationToC(readmeData)}
