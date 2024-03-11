@@ -197,7 +197,6 @@ const questions = () => {
                 'jQuery', 
                 'React',
                 'React Router',
-                
                 'SASS',
                 'Swift',
                 'Vue',
