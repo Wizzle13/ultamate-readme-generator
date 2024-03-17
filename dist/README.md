@@ -1,51 +1,66 @@
 
-  # QR code component
+  # test
   
-
-  ![Open Issues](https://img.shields.io/github/issues-raw/wizzle13/qr-code?style=plastic)
-  ![Closed Issues](https://img.shields.io/github/issues-closed-raw/wizzle13/qr-code?label=Closed%20Issues&style=plastic)
-  ![Last Commit](https://img.shields.io/github/last-commit/wizzle13/qr-code?style=plastic)
+  ![Open Issues](https://img.shields.io/github/issues-raw/test/see?style=plastic)
+  ![Closed Issues](https://img.shields.io/github/issues-closed-raw/test/see?label=Closed%20Issues&style=plastic)
+  ![Last Commit](https://img.shields.io/github/last-commit/test/see?style=plastic)
   
   ## Description
-  This is a challenge from Frontend Mentor to improve my CSS skills to create pages according to provied information.
+  dskfjslkfjsalk
 
-  ### Tools and Languages used
-  ##### Frontend:
-  ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=plastic&logo=css3&logoColor=white)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-CC6699?style=plastic&logo=SASS&logoColor=white)
-  ##### Backend:
-  None
-  ##### Database:
-  None
-  ##### Tools:
-  ![Git](https://img.shields.io/badge/Git-F05032?plastic&logo=Git&logoColor=white)![GitHub](https://img.shields.io/badge/GitHub-181717?plastic&logo=GitHub&logoColor=white)![npm](https://img.shields.io/badge/npm-CB3837?plastic&logo=npm&logoColor=white)![VSCode](https://img.shields.io/badge/VSCode-007ACC?plastic&logo=visualstudiocode&logoColor=white)
-  
-  
+ 
   ## Table of Contents
-  
-  
-  - [Screenshots](#screenshots)
-  
-  
-  - [Links](#links)
-  
-  
+  - [Purpose](#purpose)
+  - [User Story](#user-story) 
+  - [Insallation Instructions](#installation) 
+  - [Tools and Languages](#tools-and-languages)
+    - [Frontend](#frontend)  
+    - [Backend](#backend)  
+    - [Database](#database) 
+    - [Tools](#tools)   
+    - [Dependences](#dependences)
+    - [Other Tools](#other-tools)
+  - [Screenshots](#screenshots)    
+  - [Contributions](#contribution) 
+  - [Tests](#test)  
+  - [Resources](#resources)
+  - [Links](#links) 
 
+ ### Purpose
 
-  
+ <details>
+ <summary>
+ User Story
+ </summary> 
+ </details>
 
+ ### Tools and Languages used
+ ##### Frontend:
+ ![None](https://img.shields.io/badge/None-blue)
+ ##### Backend:
+ ![None](https://img.shields.io/badge/None-blue)
+ ##### Database:
+ ![None](https://img.shields.io/badge/None-blue)
+ ##### Tools:
+ ![None](https://img.shields.io/badge/None-blue)
   ## Screenshots
-  <img src="/s">
+  <img src="dd">
 
-  
+  ## Contribution
+asd
+      
+      
 
-  
+  ## Test Info
+asd
+    
 
   ## Links
-  GitHub Repository: https://github.com/wizzle13/qr-code
+  GitHub Repository: https://github.com/test/see
 
-  GitHub URL: https://wizzle13.github.io/qr-code
+  GitHub URL: https://test.github.io/see
 
 
 ![Made With](https://img.shields.io/badge/Made%20with-Ultimate%20README%20Generator-blue?style=plastic)
 
-  &copy;2022 by Chris Burton
+  &copy;2024 by Chris Burton

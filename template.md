@@ -4,25 +4,25 @@
 ![Closed Issues](https://img.shields.io/github/issues-closed-raw/wizzle13/colormarkers?label=Closed%20Issues&style=plastic)
 ![Last Commit](https://img.shields.io/github/last-commit/wizzle13/colormarkers?style=plastic)
 
-## Description
+## Description  **
 
 
  ## Table of Contents
  - [Purpose](#purpose)
  - [User Story](#user-story) 
- - [Insallation Instructions](#installation)
+ - [Insallation Instructions](#installation) ***
  - [Tools and Languages](#tools-and-languages)
-    - [Frontend](#frontend)
-    - [Backend](#backend)
-    - [Database](#database)
-    - [Tools](#tools)
+    - [Frontend](#frontend)  ****
+    - [Backend](#backend)  ****
+    - [Database](#database) ***
+    - [Tools](#tools)   ****
     - [Dependences](#dependences)
     - [Other Tools](#other-tools)
- - [Screenshots](#screenshots)   
- - [Contributions](#contribution)
- - [Tests](#test)
+ - [Screenshots](#screenshots)    ***
+ - [Contributions](#contribution) ***
+ - [Tests](#test)  ***
  - [Resources](#resources)
- - [Links](#links) 
+ - [Links](#links) ***
 
  ## Purpose
    

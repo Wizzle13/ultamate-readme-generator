@@ -63,7 +63,7 @@ const questions = () => {
                 }
             }    
         },
-         // Has user enter the Discription for their README file.
+         // Has user enter the Screen Shot.
          {
             type: 'input',
             name: 'screenshot',
@@ -257,25 +257,7 @@ const questions = () => {
                 'Yarn',
             ]
         },
-        // Asks the user for license information.
-        {
-            type: 'list',
-            name: 'license',
-            message: 'What License type is this project?',
-            choices: [
-                'None',
-                'Academic Free License v3.0',
-                'Apache license 2.0',
-                
-                'ISC',
-                
-                'MIT',
-                'Mozilla Public License 2.0',
-                'Open Software License 3.0',
-                
-                'zLib License'
-            ]
-        }        
+        
     ]);  
      
 };
